@@ -1,9 +1,11 @@
 from math import sqrt
 
-C = int(input())
-N = int(input)
-i = sqrt((N**2+N)/2)
-if i  == int(i):
-    print(i)
-else:
-    print("NO")
+numberCases = int(input())
+for i in range(numberCases):
+    numberHouses = int(input())
+    j = sqrt((numberHouses**2 + numberHouses) / 2)
+    if j == int(j):
+        j = int(j)
+        print(j)
+    else:
+        print("NO")
