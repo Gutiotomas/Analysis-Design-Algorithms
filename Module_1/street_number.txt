@@ -1,0 +1,29 @@
+A programmer (the cousin of the programmer from the first exercise) lives in a city where all the streets are numbered consecutively from 1 to M. One day, while leaving her house for a jog, she turned left and walked through all the streets until she reached the city's boundary. As she did this, she added up the squares of the street numbers, excluding the street where she lives. The next day, she did the same but turned right. To her surprise, the sum of the street numbers on the right was a multiple of the sum on the left.
+
+Let’s design an algorithm to determine, given the value of M (where 3 < M < 10,000), in how many streets (S) (where 2 < S < M) the programmer could live such that this property holds.
+
+For example, if M = 8 and the programmer lives on street 3, we have that
+
+4^2+5^2+6^2+7^2+8^2=190
+is a multiple of
+1^2+2^2=5.
+
+On the other hand, if M = 42, there are two streets (S) that satisfy the property: 5 and 14.
+
+Input
+The input contains several test cases, no more than 500. Each case corresponds to a line containing the value of M. The input ends with a value of 0, which does not correspond to a test case.
+
+Output
+For each test case, the output should contain a line with the number of streets that satisfy the property.
+
+Example
+Input:
+8
+42
+55
+0
+
+Output:
+1
+2
+0

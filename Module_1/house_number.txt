@@ -1,0 +1,25 @@
+A programmer lives on a street with N houses, where all of them are numbered consecutively from 1 to N. One day, while going for a walk with his dog, he left his house, turned left, and walked to the end of the street. As he did this, he added up the numbers of the houses, excluding his own. The next day, he did the same but turned right. To his surprise, both sums were equal.
+
+Let's design an algorithm to determine, given a street like the programmer's, with at least 3 houses, which house number satisfies this property or if, on the contrary, there is no house that satisfies it.
+
+For example, if N = 8, the answer should be house number 6, while if N = 5, the answer is that there is no house that satisfies the property.
+
+Input
+The first line of input contains the number C of test cases, no more than 20,000. Then, C lines follow, each with a value of N, no greater than 1E10.
+
+Output
+The output should have C lines, each with the number of the house that satisfies the property or the message (without quotes) 'NO' if no house exists.
+
+RECOMMENDATION: When the output requires many lines, as in this case where there may be up to 20,000, it is more efficient to store the answer in a string and then do a single print, rather than making 20,000 individual print statements.
+
+Example
+Input:
+3
+8
+5
+9800
+
+Output:
+6
+NO
+6930
