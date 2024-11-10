@@ -1,0 +1,28 @@
+A Kaprekar number, named after the Indian mathematician Dattatreya Ramchandra Kaprekar (https://en.wikipedia.org/wiki/Dattatreya_Ramachandra_Kaprekar), is a positive integer greater than 3 that, when squared, can be split into two values whose sum equals the original number.
+
+For example, 9 is a Kaprekar number because 9^2 =81 and 8 + 1 = 9.
+
+Another Kaprekar number is 2728 because 2728^2 =7441984 and 744 + 1984 = 2728.
+
+When the digit 0 is part of the split, it is valid at the beginning of the second value, as long as the next digit is not also 0.
+
+For example, 4879 is a Kaprekar number because 4879^2 =23804641 and 238 + 04641 = 4879, while 100 is not, even though 100^2 = 10000 and 100 + 00 = 100.
+
+Input
+The first line of input contains the number C of test cases, no more than 20,000. Then C lines follow, each with a positive integer less than 1,000,000.
+
+Output
+The output should have C lines, each with the message 'KAP' (obviously for Kaprekar), or 'NO' as appropriate.
+
+Example
+Input:
+3
+2728
+100
+4879
+
+Output:
+KAP
+NO
+KAP
+
