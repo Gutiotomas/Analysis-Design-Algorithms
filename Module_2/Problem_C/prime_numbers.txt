@@ -1,0 +1,33 @@
+The Prime Number Theorem (PNT) is a statement that describes the asymptotic distribution of prime numbers, formalizing the intuitive idea that primes 
+become less frequent as numbers grow larger. The theorem was proposed by Carl Friedrich Gauss between 1792 and 1793, then by Adrien-Marie Legendre 
+in 1798, and later refined by Gauss.
+
+Given P(n) as a function that denotes the count of prime numbers less than or equal to 𝑛, the theorem states that:
+
+P(n)∼ n / ln(n)​
+ 
+This means that the number of primes up to 𝑛 is approximately n/ln(n), where ln is the natural logarithm of 𝑛.
+
+Problem
+For a given value of 𝑛, you are asked to compute the error 𝑒 between the actual number of primes 𝑃(𝑛) and Gauss’s approximation:
+
+e=P(n)− n/ln(n)
+ 
+Input
+The input begins with a line containing the number of test cases 𝐶 (no more than 10,000). Then, 𝐶 lines follow, each containing a value of 𝑛 (where 10<n<100,000).
+
+Output
+For each test case, the output should consist of 𝐶 lines, each containing the corresponding error 𝑒, rounded to the nearest integer.
+
+Example
+
+Input
+3
+20
+5000
+99999
+
+Output
+1
+82
+906
