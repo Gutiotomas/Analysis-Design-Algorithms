@@ -1,0 +1,44 @@
+In many analog clocks, the hours are represented with Roman numerals. So far, all is normal. What is curious, 
+however, is that in many of these clocks, the number 4 is represented not as IV but as IIII. There are many 
+hypotheses regarding this. One of them is related to symmetry: in order for the circumference to be divided 
+into 3 equal parts, one with all numbers starting with I, another with all starting with V, and the third with 
+all starting with X. Another hypothesis, partly historical and partly legendary, is that in the 14th century, 
+King Charles V of France commissioned a clock for the tower of the Royal Palace of France. When it was finished, 
+known today as the clock of La Conciergerie, the king reprimanded the clockmaker for using IV instead of IIII, 
+believing it to be incorrect. Although the clockmaker tried to explain the Roman numeral system, the king simply said: 
+"I never make mistakes." The clockmaker, fearing for his life, and considering that the king was known as "the wise," 
+decided to change the IV to IIII and concede to the king's claim.
+
+Regardless of the reason, let's assume that a particular clock factory follows this standard for purely economic reasons: 
+By using IIII instead of IV, the factory needs 20 I's, 4 V's, and 4 X's. Given that the symbols are manufactured with a mold, 
+this factory saves resources by using a single mold to create 7 symbols at once: 5 I's, 1 V, and 1 X.
+
+Since the symbols must be manufactured separately and then applied to the clock, only four uses of the mold are required 
+per clock with no waste. Note that if the 4 were represented as the traditional IV, the only way to produce all the symbols 
+necessary for a clock would be with a giant mold of 17 + 5 + 4 symbols (and apparently, having such a large mold is too costly). 
+Now, suppose other factories have had to redesign their clocks, not using the ordinary Roman numeral system but defining 
+their own variations. Given the required quantities of each of the three symbols, how many symbols does the smallest mold 
+(as in the previous case, a mold can be used more than once) need to produce a clock without any waste?
+
+Input:
+The first line of the input contains the number 𝑁 of cases, no more than 1000. The following 𝑁 lines each contain 
+three positive integer values separated by spaces, representing the quantities of each symbol required to make a clock. 
+These values will not exceed 1𝐸10.
+
+Output:
+The output should contain 𝑁 lines, each showing the number of symbols in the smallest possible mold required 
+to manufacture a clock.
+
+Example:
+Input
+4
+20 4 4
+12 12 12
+7 6 5
+35 10 15
+
+Output
+7
+3
+18
+12
