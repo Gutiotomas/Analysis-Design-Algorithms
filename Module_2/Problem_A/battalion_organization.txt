@@ -1,0 +1,32 @@
+According to critics, the best battle in The Lord of the Rings, and probably one of the best in cinema in general, 
+is the one that takes place outside the capital of Gondor, Minas Tirith. In this battle, which also features the 
+unforgettable duel between Éowyn and the Witch-King of Angmar, a massive army of 200,000 orcs and trolls strikes 
+fear into their enemies.
+
+Sauron is very meticulous, so he wants to divide this army into battalions of exactly the same number of "soldiers." 
+The thing is, there are many ways to make this distribution: he could have 20 battalions of 10,000 each, or 50 battalions 
+of 4,000 each, among other possibilities.
+
+Poor Sauron! Given the size of his army (not just for this battle but for others as well), could you help him determine 
+the number of possible exact distributions, knowing that the minimum size of a battalion is one soldier?
+
+Input:
+The first line of the input contains the number 𝑁 of cases, no more than 100. The following 𝑁 lines each contain
+a positive integer 𝐸, corresponding to the size of the army (2 ≤ 𝐸 ≤ 500,000).
+
+Output:
+The output should consist of 𝑁 lines, each containing the number of different distributions.
+
+Example:
+Input
+4
+200000
+25
+10000
+9887
+
+Output
+42
+3
+25
+2
