@@ -1,0 +1,46 @@
+I don't know if you already knew this, but the planets in our solar system were named by ancient civilizations as
+a way to honor their gods.
+ 
+For example, the Babylonians knew the closest planet to the Sun as Nabu, in honor of their god of writing and
+destiny, while the ancient Greeks called it Stilbon, and their more modern descendants named it Hermes, after
+the messenger of the Olympian gods, due to how fast it moves across the sky (it takes only 88 days to complete
+an orbit around the Sun, traveling at almost 48 kilometers per second, faster than any other planet). The Romans
+named it after the equivalent god in their mythology: Mercury.
+
+Meanwhile, thanks to its distinctive brightness (due to its proximity and the density of its atmosphere, 
+it's the third brightest celestial object in our sky after the Sun and Moon) and its appearance at dawn, 
+the ancient Romans associated the second planet with Venus, the goddess of love and beauty, while the Greeks 
+linked it with their equivalent goddess, Aphrodite.
+
+You can check the origin of the other names at astrobitacora.com.
+
+Let’s suppose that, consistent with this "divine" origin, the ancient Greeks referred to "Olympus Day" as 
+the day when all planets are perfectly aligned.
+
+If today such an event were to occur, and we also knew the exact time in days it takes for each planet to 
+complete its orbit, how many days would be left until the next occurrence of this celestial alignment? 
+Consider that, for our solar system, we might not necessarily be interested in the alignment of all nine 
+planets (something that probably won’t happen before the universe ends), but in the alignment of any subset 
+of two or more planets. We could even be interested in any other system with a single sun.
+
+Input:
+The first line of the input contains the number 𝑁 of cases, no more than 500. The next 𝑁 lines each 
+contain between 2 and 5 positive integers (not greater than 5000) separated by spaces, representing 
+the orbital periods of each planet in days (these values are not necessarily ordered by the planet’s distance from the sun).
+
+Output:
+The output should contain 𝑁 lines, each showing the number of days until the next Olympus Day.
+
+Example:
+Input
+4
+20 10 30
+88 226 365 687 4332
+1000 1000 1000 1000
+99 97
+
+Output
+60
+900156286920
+1000
+9603
