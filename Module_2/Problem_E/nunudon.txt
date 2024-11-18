@@ -1,0 +1,28 @@
+The following is the NuNuDoN Sequence (N plus Number of Divisors of N):
+
+𝑁0=1
+𝑁𝑖=𝑁𝑖−1+𝐷(𝑁𝑖−1) for 𝑖>0, where 𝐷(𝑥) represents the number of divisors of 𝑥.
+
+Thus, the first six terms of this sequence would be: 1, 2, 4, 7, 9, 12.
+
+The problem is, given two integer values 𝐴 and 𝐵 (𝐴<𝐵), to find the number of terms in this sequence that lie
+within the range [𝐴,𝐵].
+
+Input
+The first line of the input contains the number 𝑁 of test cases, not exceeding 100. The following 𝑁 lines each 
+contain two integers separated by a space (1≤𝐴<𝐵≤100000).
+Output
+For each test case, output a single integer representing the number of terms in the sequence that fall within 
+the corresponding range.
+
+Example:
+Input
+3
+1 12
+1 100
+65 70
+
+Output
+6
+20
+0
