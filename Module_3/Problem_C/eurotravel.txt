@@ -1,0 +1,56 @@
+We all dream of a great trip across Europe, right? Well, let's suppose we have the resources to do it, and we've 
+already chosen the cities we definitely want to visit. Let's also assume we'll be traveling exclusively by train, 
+and for those cities that have a railway connection between them, the ticket price in Euros is exactly one-tenth 
+of the distance of that railway in kilometers.
+
+If it's a fundamental requirement to visit each city exactly once, what will be the minimum cost to do so?
+
+For example, suppose we want to visit Frankfurt and Munich in Germany, Prague in the Czech Republic, and Milan in Italy.
+
+And suppose the existing railway lines are:
+
+Frankfurt – Munich (and vice versa): 430 km
+Frankfurt – Prague (and vice versa): 620 km
+Frankfurt – Milan (and vice versa): 670 km
+Munich - Prague (and vice versa): 490 km
+Munich - Milan (and vice versa): 550 km
+In this case, the minimum cost is 159 Euros with the route 
+Milan – Frankfurt – Munich – Prague, or the route Prague – Munich – Frankfurt – Milan.
+
+Input
+The input starts with a line containing the number 𝑃 of cases, no more than 10. Each case starts with a line containing a 
+positive integer 𝐶 (not greater than 8), which represents the number of cities to visit. Then follow 𝐶 lines containing 
+the distance matrix, taking into account that:
+
+The distances are integer values in the range [1, 1000].
+The values in a single row are separated by tabs.
+The matrix is symmetric, and the values on the main diagonal are 0.
+A value of 'n.a' means there is no railway line between those cities.
+
+Output
+The output must contain 𝑃 lines, one for each case, with the minimum cost of visiting all cities, passing through 
+each one exactly once, and rounding the result to its integer value. If there is no way to complete the trip, 
+the output should display the message (without quotes) "impossible".
+
+Example:
+Input
+3
+4
+0 430 620 670
+430 0 490 550
+620 490 0 n.a
+670 550 n.a 0
+3
+0 10 10
+10 0 10
+10 10 0
+4
+0 5 n.a n.a
+5 0 n.a n.a
+n.a n.a 0 5
+n.a n.a 5 0
+
+Output
+159
+2
+imposible
