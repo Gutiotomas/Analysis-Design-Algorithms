@@ -1,0 +1,37 @@
+The Bermuda Triangle is a geographical area of approximately 1.1 million km² shaped like an almost equilateral triangle, 
+located in the Atlantic Ocean between Miami, Puerto Rico, and the Bermuda Islands.
+
+The first documented mention of this place was in 1950 when Edward Van Winkle Jones, a journalist from Associated Press, 
+wrote about some lost ships there. In that article, he mentioned that some disappearances of ships, planes, and small boats 
+were "mysterious." He also gave this area the nickname "Devil's Triangle." Then, in 1964, the writer Vincent Gaddis coined 
+the term "Bermuda Triangle" in an article in the American magazine Argosy. The following year, he published the book 
+"Invisible Horizons: The True Mysteries of the Sea," which included a chapter called "The Deadly Bermuda Triangle." 
+Later, in 1974, the mystery turned into a real myth thanks to Charles Berlitz, a science fiction writer, who published 
+the bestseller "The Bermuda Triangle," where he copied much of Gaddis' text and compiled cases of disappearances 
+(heavily manipulated and misrepresented), mixed with falsehoods and flagrant exaggerations.
+
+On the other hand, the triangle of n-sums is like the one shown in the figure. The idea is to place 9 different 
+positive integers such that the sum of each side is equal to 𝑛.
+
+For example, if the 9 numbers correspond to the values from 1 to 9, a possible arrangement of them when 𝑛 equals 20 is:
+
+Input:
+The input starts with a line containing a positive integer 𝐶(1≤𝐶≤100), which corresponds to the number of test cases. 
+Then, 𝐶 lines follow, one for each test case. Each case consists of 10 positive integers separated by spaces. 
+The first of these 10 values corresponds to 𝑛(10≤𝑛≤500), while the other nine correspond to the different numbers 
+that can be arranged (without repetition) in the figure.
+
+Output:
+The output should have 𝐶 lines, each containing the number of different arrangements of the numbers that meet the 
+property for the corresponding test case. If there is no arrangement that satisfies the condition, a 0 should be displayed.
+
+Example:
+Input
+2
+20 1 2 3 4 5 6 7 8 9
+100 19 18 17 16 25 14 13 12 11
+
+Output
+288
+0
+ 
