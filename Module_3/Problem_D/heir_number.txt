@@ -1,0 +1,30 @@
+A number is defined as an heir if it retains the same digits as its parents after they are multiplied. 
+For example, 2187 is an heir number, whose parents are 81 and 27 (81 × 27 = 2187). More formally, we say that 
+a positive integer is an heir if it satisfies the following three conditions:
+
+It has an even number of digits.
+It is the product of two parent numbers, each having half as many digits as its heir.
+It inherits all the digits of its parents, in the same quantities, but not necessarily in the same order.
+
+Input
+The input begins with a positive integer 𝐶 on a single line, no greater than 50, which represents the number
+ of test cases. Then follow 𝐶 lines, each with a positive integer less than 1𝐸9.
+
+Output
+The output should contain 𝐶 lines, each with the message (without quotes) "Heredero" or "No", depending on the result.
+
+Example:
+Input
+5
+2187
+98
+125460
+69521
+10052064
+
+Output
+Heredero
+No
+Heredero
+No
+Heredero

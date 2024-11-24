@@ -30,7 +30,7 @@ A value of 'n.a' means there is no railway line between those cities.
 Output
 The output must contain 𝑃 lines, one for each case, with the minimum cost of visiting all cities, passing through 
 each one exactly once, and rounding the result to its integer value. If there is no way to complete the trip, 
-the output should display the message (without quotes) "impossible".
+the output should display the message (without quotes) "imposible".
 
 Example:
 Input
