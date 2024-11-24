@@ -1,0 +1,42 @@
+José goes to the gym.
+
+Does he do it for his health? – No. He does it simply so that no one at home calls him lazy.
+
+When he goes, does he exercise? – No. He just listens to music with his headphones and pretends to be doing something.
+
+However, he doesn't post photos on Facebook with the gym in the background.
+
+Be smart, be like José. Just kidding, the problem is to help José create his playlist. He isn’t picky about what he listens to;
+ he just wants to make sure that if he is going to spend a certain amount of time at the gym, his playlist doesn't repeat songs,
+  each song plays in full, and the total time matches exactly that time. If that’s not possible, he wants to minimize the amount
+   of "silent" time.
+
+For example, if José has 4 songs with durations in minutes of 3, 1, 3, and 4, and the time he will spend at the gym is 5 minutes,
+ the optimal playlist would include the songs that last 1 and 4 minutes. In another case, if he has 5 songs with durations 
+ of 4, 9, 8, 4, and 2 minutes, and the time he will spend at the gym is 10 minutes, the optimal playlist would include the 
+ songs that last 8 and 2 minutes (or also the songs that last 4, 4, and 2 minutes).
+
+Input
+The input starts with a positive integer value on a single line, not greater than 10, which corresponds to the number 
+𝐶 of test cases. Then, 𝐶 lines follow for each case, starting with a value 𝑀 corresponding to the amount of time in 
+minutes that José will spend at the gym (a positive integer not exceeding 120), followed by 𝑁 values (1 ≤ N ≤ 15) 
+separated by spaces that correspond to the durations of the songs. These values are positive, non-zero integers.
+
+Output
+The output should contain 𝐶 lines, each with the minimum amount of leftover time in minutes.
+
+Example:
+Input
+5
+5 3 1 3 4
+20 5 6 7
+10 4 9 8 4 2
+20 10 5 7 4
+10 12 15
+
+Output
+0
+2
+0
+1
+10
