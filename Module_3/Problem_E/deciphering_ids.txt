@@ -1,0 +1,37 @@
+Every country issues a public document to allow the personal and unequivocal identification of its citizens. 
+For example, in Colombia, this document is called "Cédula de Ciudadanía" (CC), while in Brazil it is called 
+"Registro Geral" (RG), and in Spain, Argentina, Honduras, and Peru it is called "Documento Nacional de Identidad" (DNI).
+
+In all cases, this document contains a unique identifier, which is numeric in some countries and alphanumeric in others.
+
+In the case of Spain, for example, the DNI contains eight digits followed by a verification character, which is a 
+capital letter. It is called a verification character because, when the eight-digit number is divided by 23, the 
+remainder must correspond to a unique letter as follows:
+
+For example, if the eight digits are 76543210, the remainder of the integer division by 23 is 15, so the verification 
+character would be 'S', and the complete DNI would be 76543210S.
+
+Suppose we have a photo of a DNI, but the resolution is poor, and one or more digits of the DNI are not visible. 
+The problem, then, is to determine how many DNIs would be compatible.
+
+For example, if the photo reads 1234?670Y, where '?' represents the digit that is not visible, the only possible 
+digit for that position is 5 because no other digit would result in the verification character 'Y'.
+
+Input
+The input begins with a positive integer 𝐶 on a single line, no greater than 20, which represents the number of test cases.
+Then, 𝐶 lines follow, each with a DNI where at least one and no more than five digits are missing (represented by '?').
+
+Output
+The output should contain 𝐶 lines, each with the number of compatible DNIs.
+
+Example:
+Input
+3
+765?3210S
+12?45?78A
+4??44??4Z
+
+Output
+1
+4
+435
