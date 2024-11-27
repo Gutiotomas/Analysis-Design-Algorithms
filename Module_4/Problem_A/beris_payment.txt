@@ -1,0 +1,27 @@
+Beri (also called "Beli," "Berri," "Belly," "Berry," or "Berries") is the currency unit of the world of One Piece, 
+symbolized by the sign "."
+
+The different denominations of bills and coins are as follows: 10000, 5000, 1000, 500, 100, 50, 10, 5, 1
+
+When a pirate crew acquires a treasure, they split the earnings among the crew members. However, there is one crew 
+that is very picky and insists that, given a certain amount, it should be distributed with the minimum possible number 
+of bills and/or coins. For example, if the amount is 8000, any other crew would not mind receiving 8 bills of 1000, 
+but for this crew, it would be essential to receive exactly 1 bill of 5000 and 3 bills of 1000. Can you help them with 
+this task?
+
+Input
+The input begins with a positive integer 𝑁 on a single line, no greater than 5000, representing the number of test cases.
+Then, 𝑁 lines follow, one for each test case. Each test case contains a positive integer 𝐵, no greater than a billion, 
+representing an amount expressed in Beris.
+
+Output
+The output should contain 𝑁 lines, each with the minimum number of bills and/or coins required for each test case.
+
+Example:
+Input
+550
+8719
+
+Output
+2
+13
