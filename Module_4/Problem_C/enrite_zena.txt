@@ -1,0 +1,18 @@
+Enrite is a programmer who, like many others, has become addicted to energy drinks. He spends hours and hours in front 
+of his computer consuming nothing but energy drinks, which, of course, is not good for his health.
+
+It turns out that Enrite's favorite energy drink has launched an advertising campaign: every drink bottle has a positive 
+integer no greater than 999 printed inside the cap. If two caps have values that sum up to at least 1000, they can be 
+exchanged for a free drink. Enrite has been collecting caps all year long, and now it’s time to redeem them. However, 
+being a programmer, he wants to write a program to maximize the number of drinks he can get.
+
+By the way, Enrite’s last name is Zena, which is quite curious considering that “enrite zena” is a palindrome of the 
+word “energizante” (which means energy drink in Spanish).
+
+Input
+The input starts with a line containing a positive integer 𝐶, which corresponds to the number of test cases (no more than 5). 
+Each test case begins with a line containing the number 𝑁 of caps Enrite has (no more than 50000). Then 𝑁 lines follow, 
+each with the value of a cap.
+
+Output
+For each test case, there should be a single line with the maximum number of drinks Enrite can redeem.
