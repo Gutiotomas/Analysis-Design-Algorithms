@@ -1,0 +1,19 @@
+Mayor McDaniels from South Park, aiming to keep the kids in the town occupied, has decided to rent a trampoline
+for public use. The problem is that all the kids are very picky and each one wants to use it at a specific time, 
+or earlier if possible, and they throw a huge tantrum if they have to use it at a later time.
+
+Not all kids throw tantrums for the same duration. For example, Eric Cartman is capable of throwing a fit for hours 
+on end, while others like Wendy are less troublesome and throw fits for only a few minutes.
+
+Given that each kid will have a 10-minute turn on the trampoline and it’s impossible to satisfy everyone’s wishes, 
+how can the mayor, at the very least, minimize the total tantrum time?
+
+Input
+The input begins with a single positive integer no greater than 5, which represents the number of test cases. 
+Each test case starts with a line containing the number 𝑁 of kids (1≤N≤5000). Then, 𝑁 lines follow, each containing
+two positive integers separated by a space: the time 𝑡𝑖 when the 𝑖-th kid wants to start using the trampoline (0≤𝑡𝑖≤10N), 
+and the time 𝑝𝑖 they will throw a tantrum if they have to wait (1≤𝑝𝑖≤240). Both values are expressed in minutes, 
+and in the case of 𝑡𝑖, it is always a multiple of 10 because the turns are in 10-minute intervals.
+
+Output
+For each test case, you must display a single line with the minimum total tantrum time that can be achieved.
