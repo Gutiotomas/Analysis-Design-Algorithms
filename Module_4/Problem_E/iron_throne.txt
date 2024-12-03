@@ -1,0 +1,30 @@
+The dispute for the Iron Throne is relentless. Each house wants to claim it for themselves and is willing to sacrifice
+as many soldiers as necessary.
+
+To conquer an enemy house's fortress, three values must be considered: the number 𝑆 of soldiers required to win the battle, 
+the number 𝐾 of casualties expected, and the number 𝐵 of soldiers that must remain in the fortress to prevent it from 
+being retaken by the enemy. The number of soldiers is limited, so it has been decided to attack the fortresses one by one. 
+Therefore, it is necessary to define the order in which they are attacked to minimize the total number of soldiers required 
+to conquer them all.
+
+For example, if there are two fortresses to attack:
+
+Fortress	S	K	B
+    A	   100	5	5
+    B	    90	30	20
+If fortress A is attacked first, the required soldiers would be: 100 soldiers to win, 5 casualties, and 5 soldiers
+must remain, so 90 soldiers would remain. If fortress B is then attacked, those 90 soldiers would be enough to win, 
+there would be 30 casualties, leaving 60, and 20 soldiers must remain, so 40 soldiers would remain.
+
+On the other hand, if fortress B is attacked first, 90 soldiers would be required to win, 30 casualties, and 20 soldiers 
+must remain, so 40 soldiers would remain. Then, when attacking fortress A, 40 soldiers would not be enough, so 60 more 
+would be needed (totaling 150), with 5 casualties and 5 soldiers remaining, leaving 90 soldiers.
+
+Input
+The input contains several test cases, no more than 10. Each case starts with a positive integer on a single line, 
+no greater than 5000, which represents the number 𝑁 of fortresses to attack. Then, 𝑁 lines follow, each with three 
+integer values separated by spaces: 𝑆,𝐾,𝐵 where 0≤𝐾≤𝑆≤1000 and 0≤𝐵≤1000. A case with 𝑁=0 indicates the end of the 
+input and should not be processed.
+
+Output
+For each test case, the output should contain a single line with the corresponding minimum number of soldiers required.
