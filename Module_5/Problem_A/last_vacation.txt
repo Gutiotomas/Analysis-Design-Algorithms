@@ -1,0 +1,40 @@
+These are the last holidays that Gordie will spend with his family (to find out why, you will need to watch the movie 
+What we did on our holiday http://youtu.be/wWBMeQRYYa8). The thing is, he wants to spend some time alone with as many 
+family members as possible. However, there are three problems:
+
+He only has one long weekend with a holiday Monday to do so.
+Each family member has a specific, unbreakable time requirement for when they want to meet and for how long.
+The minimum duration is one minute.
+Gordie also needs to sleep, so he can't attend to anyone between midnight and six in the morning (in other words, he can 
+only meet someone until 12 a.m. or starting from 6 a.m.).
+Input
+The input begins with a line containing the integer 𝐶 representing the number of test cases, no more than 20. 
+Each case starts with a line containing a positive integer 𝐹, no greater than 5000, which represents the number of 
+family members. This is followed by 𝐹 lines, each with three values separated by spaces: the day (without accents) 
+either "sabado", "domingo", or "lunes", the start time when the family member wants to meet Gordie in the format 
+hh:mm (with ℎ between 00 and 23, and 𝑚 between 00 and 59), and the duration in minutes for the meeting.
+
+Output
+The output should contain 𝐶 lines, each with the corresponding maximum number of family members Gordie can meet.
+
+Example:
+
+Input
+2
+8
+sabado 15:30 160
+sabado 12:15 270
+sabado 10:00 300
+sabado 22:00 135
+domingo 8:00 960
+lunes 6:00 600
+lunes 12:00 123
+lunes 8:00 240
+3
+lunes 1:23 4567
+sabado 5:59 120
+domingo 22:01 120
+
+Output
+5
+0
