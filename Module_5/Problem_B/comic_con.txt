@@ -1,0 +1,55 @@
+That highly anticipated time of year has arrived. Everyone is excited and preparing their best outfits. 
+It's not Christmas, nor Halloween—it's comic-con.
+
+If you didn't know, comic-con is a multi-day event celebrated in many cities around the world, based on the 
+format that began nearly 50 years ago in San Diego, California, USA. While comics are clearly an important part, 
+the general theme can be said to be entertainment, covering other arts such as cinema, anime, video games, and more. 
+In addition to seminars and workshops, there are usually presentations of upcoming releases, meet-and-greets with 
+famous artists, cosplay contests, and much more.
+
+María José never misses any comic-con in her city, and this year is no exception. She has been looking at the 
+schedule and wants to attend all the activities, but the problem is that there are so many that some overlap in time, 
+meaning she can't attend them all. That's why she has tasked herself with convincing her friends to attend the 
+activities she can't go to, so that together they can cover all of them.
+
+Given the list of activities, where the start and end times are known, could you help María José calculate how 
+many friends she needs at a minimum to cover all the activities? You must consider three things:
+
+A person cannot be in more than one activity at the same time.
+
+The activities must be attended in their entirety, not partially.
+
+You can assume that the time required to travel from the location of one activity to another is zero.
+
+Input
+The input contains several test cases, no more than 5. Each case begins with a positive integer 𝑁, no greater 
+than 10000, which corresponds to the number of activities. This is followed by 𝑁 lines, one for each activity, 
+containing two positive integers no greater than 1E6, separated by a space: the start and end times of the activity. 
+The second value is strictly greater than the first. These times are interpreted as the number of minutes 
+counted from time zero, which is when the comic-con begins. A case with no activities, 𝑁=0, indicates the end of 
+the input and should not be processed.
+
+Output
+For each test case, the output should contain a single line with the corresponding minimum number of friends required.
+
+Example:
+Input:
+3
+0 5
+12 20
+5 10
+4
+10 20
+20 30
+15 25
+25 35
+3
+0 10
+2 8
+4 6
+0
+
+Output
+0
+1
+2
