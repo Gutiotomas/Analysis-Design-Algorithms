@@ -1,0 +1,40 @@
+Let’s suppose that in some remote part of the world, there’s a way to add numbers that is “slightly” 
+different from the one we all know. The difference lies in the fact that adding two numbers has a cost, 
+which is equal to the resulting sum. For example, adding 5 and 7 has a cost of 12.
+
+The problem arises when you need to add more than two numbers, as there are different alternatives, 
+not necessarily with the same cost. For example, to add the numbers 2, 3, and 4, there are three alternatives:
+
+2 + 3 = 5 (cost of 5), then 5 + 4 = 9 (cost of 9), for a total cost of 14
+2 + 4 = 6 (cost of 6), then 6 + 3 = 9 (cost of 9), for a total cost of 15
+3 + 4 = 7 (cost of 7), then 7 + 2 = 9 (cost of 9), for a total cost of 16
+The question to solve is: Given a set of numbers to be added, what is the minimum cost?
+
+Input
+The input consists of several test cases, no more than 5. Each test case begins with a positive integer 
+𝑁
+N (1 < N < 5000) which corresponds to the number of numbers to be added. This is followed by 
+𝑁
+N lines, one for each of these numbers, where each is a positive integer no greater than 100000. 
+The input ends with a line where 𝑁=0, and this line should not be processed.
+
+Output
+For each test case, the output should display a single line with the minimum cost to perform the addition.
+
+Example:
+Input:
+3
+1
+2
+3
+5
+1
+2
+3
+4
+5
+0
+
+Output:
+9
+33
