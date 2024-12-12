@@ -1,0 +1,19 @@
+We all know the ASCII code, which defines a correspondence between a certain set of characters and an 8-bit value. 
+For example, the character '?' corresponds to the value 00111111 (63 in decimal). However, let's suppose that a 
+specific application uses a subset of the 256 ASCII characters, and the exact frequency of usage of each character 
+is known.
+
+The problem then consists of using Huffman coding (not necessarily 8 bits) to assign a code to each character. 
+It should be noted that, in the case of a frequency tie, the tie should be broken lexicographically.
+
+Input
+The input begins with a single positive integer, no greater than 50, which indicates the number of test cases. 
+Each test case begins with a line containing the integer 𝑁, which is the number of characters in the alphabet 
+(2 ≤ 𝑁 ≤ 256). Then follow 𝑁 lines, each containing two values separated by a space: the character 𝐶𝑖 and its frequency 
+𝐹𝑖 (0 < 𝐹𝑖 < 100000).
+
+Output
+For each test case, you must print a single line with the message (without quotes): "caso i:". Then, 
+for each test case, print the corresponding characters, one per line, followed by a space and the 
+resulting binary code. The characters must be displayed in the order of an in-order traversal of the 
+resulting binary tree. There should be an empty line between test cases.
