@@ -1,0 +1,47 @@
+Naval Battle is a traditional board game that combines some strategy with some luck and is designed for two players. 
+In its simplest form, it is played with graph paper and pencil, although the most popular version comes in the form 
+of a small briefcase that opens into a double-sided board.
+
+Regardless of the format, the general idea is that the players manage an ocean board and a firing board, each 
+arranged as a grid. On the first board, the player places their ships and records the opponent’s cannon shots; 
+on the other board, they record their own shots against the opponent, differentiating between hits and misses. 
+The winner is the player who deduces the positions of all the opponent’s ships.
+
+This problem is not exactly about that game, or perhaps it is, but with a modified version. In this version, 
+all the ships are positioned horizontally within the grid that represents the sea. The length of the ships 
+doesn't have to be the same, but each ship is represented by a pair of coordinates: the position of its 
+leftmost cell 𝐿 and its rightmost cell 𝑅. The shots are not cannonballs, meaning they do not impact a single 
+grid cell; instead, they are torpedoes, which are only fired vertically and have the property of hitting all 
+ships that are in their path, i.e., in the column where they are fired.
+
+Given this game mechanic and a specific distribution of ships, what is the minimum number of torpedo shots 
+required to hit them all? For example, for the configuration of ships shown in the figure, four shots are necessary.
+
+Input
+The input contains a series of test cases, no more than 5. Each test case begins with a line containing the number 
+𝑁 of ships, no more than 10000. This is followed by 𝑁 lines, each with two positive integer values separated 
+by a space: the coordinates of each ship (1 ≤ 𝐿 < 𝑅 < 1E7). The input ends with a line containing the value 
+𝑁=0, which should not be processed.
+
+Output
+For each test case, the output should contain a single line with the corresponding minimum number of shots.
+
+Example
+Input:
+2
+1 5
+6 10
+2
+1 5
+5 10
+4
+1 4
+6 15
+12 20
+2 10
+0
+
+Output:
+2
+1
+2
