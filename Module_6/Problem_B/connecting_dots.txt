@@ -1,0 +1,45 @@
+Jerónimo is a very particular child. In preschool, while all his classmates are doing the exercise of 
+connecting dots according to instructions to form a figure, he does something very different. 
+He doesn't care if a "figure" can or cannot magically form; what he really cares about is saving as 
+much of his precious pencil graphite as possible. That’s why, instead of following the suggested sequence of dots, 
+he draws straight lines between one point and another until he connects them all, but in a way that uses as 
+little pencil as possible.
+
+For example, while his classmates with the following sequence of points:
+
+                                            .
+                                          .   .
+                                           . .
+
+Form the star of 5 points but Juanito, on the other hand, draws the following lines:
+
+                                            .
+                                          ./ \.
+                                           ._./
+
+Input
+The input begins with a single positive integer on a line, no greater than 10, indicating the 
+number of test cases. Each test case starts with a line containing the number 𝑁 of points (1 ≤ 𝑁 ≤ 100). 
+Then follow 𝑁 lines, each containing two real values separated by a space representing the coordinates 
+𝑥,𝑦 (in an arbitrary unit of measurement) of each point (-1000 ≤ 𝑥,𝑦 ≤ 1000).
+
+Output
+For each test case, output a single line with the minimum total length, with one decimal place, 
+of the lines that connect all the points.
+
+Example
+Input:
+2
+3
+0.0 0.0
+0.0 3.0
+4.0 0.0
+4
+1.0 1.0
+1.0 3.0
+3.0 3.0
+3.0 1.0
+
+Output
+7.0
+6.0
