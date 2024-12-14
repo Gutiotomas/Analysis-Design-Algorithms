@@ -8,9 +8,7 @@ not counting the starting hideout 0. There is a series of connections between th
 Each connection has a difficulty level expressed as a number: the higher the number, the higher the difficulty 
 (not necessarily related to the distance) of moving from one hideout to another.
 
-Knowing all the connections and their difficulties, could you help Zoé escape? For example, if the hideouts are 
-connected as shown in the following figure, to reach hideout 1, the best route is not going directly from 0, 
-but passing through 3, then 4, and from there to 1 (with a cumulative difficulty of 6).
+Knowing all the connections and their difficulties, could you help Zoé escape? 
 
 Input
 The input begins with a line containing two positive integer values separated by a space: 
