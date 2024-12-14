@@ -1,0 +1,44 @@
+The government of a newly established nation in a territory where there was practically nothing before, 
+has created the infrastructure office to meet the needs of the citizens. As its first task, this office 
+must connect the country's major cities. To assist in this task, the planning and territory office has 
+provided a map with all the possible roads that could be built between one city and another, along with 
+the corresponding cost.
+
+The problem is that, due to the geography of the country, there are regions that are isolated from others 
+by land, so in addition to roads, the construction of airports will be necessary. The good news is that, 
+regardless of where they are built (in which cities), the cost of an airport is practically constant.
+
+Considering this scenario, and knowing that the government's goal is for any citizen to be able to travel 
+from any city to any other by land or air, what should the infrastructure office's plan be (which airports 
+and which roads to build) in order to minimize the total cost? An additional restriction is that at least 
+one airport must be built in the country; otherwise, how could they travel abroad?
+
+Input
+The input begins with a single positive integer on one line, no greater than 20, which represents the number 
+of test cases. Each test case starts with a line containing three positive integer values separated by spaces: 
+the number 𝑁 of cities (1 ≤ 𝑁 ≤ 80), the number 𝑀 of possible roads (1 ≤ 𝑀 ≤ 1000), and the cost 𝐴 of building an 
+airport (1 ≤ 𝐴 ≤ 50000). Then, 𝑀 lines follow, each with three integer values separated by spaces corresponding 
+to the identifiers of the two cities 𝐴 and 𝐵 that would be connected bidirectionally by the road (cities are 
+identified from 1 to 𝑁, and a pair of cities does not appear more than once), followed by the cost 𝑅 of the road 
+(1 ≤𝑅 ≤ 20000).
+
+Output
+For each test case, output a single line with the minimum total cost along with the number of airports that 
+should be built. These two values should be separated by a space.
+
+Example
+Input:
+2
+4 4 100
+1 2 10
+4 3 15
+4 1 45
+2 3 25
+5 3 200
+1 2 20
+4 5 40
+3 2 30
+
+Output:
+150 1
+490 2
