@@ -1,0 +1,29 @@
+We all know a maze, right? Well, this one is a bit different. It can be represented as a matrix containing integer 
+values between 0 and 9, and you can only move up, down, left, or right. Considering that the value in a cell 
+represents the cost of moving to that cell, what is the minimum total cost to exit the maze, starting from the 
+top-left corner and considering that the exit is in the bottom-right corner?
+
+For the following maze, for example, the minimum cost is 24:
+
+Input
+The input begins with a line containing a single positive integer, no greater than 10, which represents the 
+number of test cases. Each test case begins with a line containing two integers separated by a space 
+corresponding to the number of rows 𝑁 and the number of columns 𝑀 of the maze (1 ≤ 𝑁,𝑀 ≤ 999). Then follow 
+𝑁 lines, each with 𝑀 values separated by a space.
+
+Output
+For each test case, output a single line with the minimum cost to exit the maze.
+
+Example
+Input:
+2
+3 3
+0 1 1
+1 1 1
+1 1 1
+1 5
+0 1 2 3 4
+
+Output:
+4
+10
