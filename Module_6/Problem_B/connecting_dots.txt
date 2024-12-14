@@ -7,9 +7,9 @@ little pencil as possible.
 
 For example, while his classmates with the following sequence of points:
 
-                                            .
-                                          .   .
-                                           . .
+                                           4.
+                                   1and6  .   . 2
+                                         3 . . 5
 
 Form the star of 5 points but Juanito, on the other hand, draws the following lines:
 
