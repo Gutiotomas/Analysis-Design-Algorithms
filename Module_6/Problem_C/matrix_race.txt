@@ -5,6 +5,14 @@ top-left corner and considering that the exit is in the bottom-right corner?
 
 For the following maze, for example, the minimum cost is 24:
 
+                                0-3-1 2 9
+                                    |
+                                7 3 4 9 9
+                                    |
+                                1 7 5 5 3
+                                    |
+                                2 3 4-2-5
+
 Input
 The input begins with a line containing a single positive integer, no greater than 10, which represents the 
 number of test cases. Each test case begins with a line containing two integers separated by a space 
