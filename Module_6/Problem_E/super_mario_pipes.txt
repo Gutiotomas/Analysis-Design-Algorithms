@@ -1,0 +1,43 @@
+Super Mario Bros. is a platform video game, perhaps the most famous in the world, designed by Shigeru Miyamoto, 
+released on September 13, 1985, and produced by the company Nintendo. The game describes the adventures of the 
+brothers Mario and Luigi, who must rescue Princess Peach from the Mushroom Kingdom, who has been kidnapped by 
+the king of the Koopas, Bowser.
+
+An important part of the game is the pipes or warp pipes, from which Piranha Plants can emerge, but their most 
+interesting function is that they allow players to travel to certain sections of the game, either to collect 
+coins and other items or to shorten their path.
+
+Let’s assume that the players want to go from an access pipe to a destination pipe, but to do so, they can pass 
+through a set of interconnected intermediate pipes. Given 𝑁 pipes identified from 0 to 𝑁−1, where the first is 
+the origin and the last is the destination, and where each connection between pipes has a flow capacity 
+(expressed in some unit of mushrooms/second), what is the maximum flow in that same unit that can exit through 
+the destination pipe?
+
+Input
+The input begins with a line containing a positive integer 𝐶 representing the number of test cases, no more than 5. 
+Each test case starts with a line containing two positive integer values separated by a space: the number 
+𝑁 of pipes (accesses) and the number 𝑀 of connections between them (2≤𝑁≤500;1≤𝑀≤ 𝑁(𝑁−1)/2). Then, 𝑀 lines follow, 
+each with three values separated by spaces: the first two correspond to the identifiers of the source and destination 
+pipes of each connection, while the third corresponds to its capacity, which is a positive integer not exceeding 1000. 
+There will be at most one unidirectional connection between two different pipes, and no circular connections 
+(same source and destination).
+
+Output
+For each test case, there must be a single line with the maximum flow for that case.
+
+Example
+Input:
+1
+6 9
+0 1 20
+0 2 10
+1 2 8
+1 3 9
+1 4 6
+2 3 7
+2 4 5
+3 5 25
+4 5 15
+
+Output:
+27
