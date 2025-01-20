@@ -1,0 +1,55 @@
+This famous triangle has been analyzed long, long ago and has been given several names. Its properties were discussed, 
+for example, by the Persian mathematicians Al-Karaji (953–1029) and Omar Khayyám (1048–1131), and in the Persian realm, 
+it was known as Khayyám's triangle.
+
+Later, in the 13th century, it was introduced in China by Yang Hui (1238–1298), where it became known as Yang Hui's triangle, 
+while the first record of the triangle in Europe came with Petrus Apianus (1495–1552). However, a little later, in Italy, 
+it became known as Tartaglia's triangle, in honor of the Italian algebraist Niccolò Fontana Tartaglia (1500–1577).
+
+So, when did it take the name we know it by today? In his book Traité du triangle arithmétique (Treatise on the 
+Arithmetic Triangle) published in 1654, Blaise Pascal gathered several known results about the triangle and used 
+them to solve problems related to probability theory. However, it was not until 1708 that Pierre Rémond, marquis 
+de Montmort, known for his work on calculating the probabilities of gambling games, called it: "Table of Mr. Pascal 
+for combinations." Later in 1730, it was named Triangulum Arithmeticum Pascalianum (Pascal's Arithmetic Triangle) 
+by Abraham de Moivre, a French mathematician famous for predicting the date of his death through a statistical calculation.
+
+Now, what is this triangle all about? By adding two adjacent elements, the result will be the element located just 
+below the two. This rule applies to all elements except for the diagonals that start from the 1 at the top of the 
+triangle, which all have a value of 1.
+
+An interesting consequence of Pascal's triangle is that the sum of all values in a row is a power of 2. 
+This is because, by the binomial theorem, the expansion of the n-th power of (1+1)^𝑛=2^𝑛 is:
+|𝑛| + |𝑛| + ... + |𝑛| + |𝑛| = 2^𝑛
+|0|   |1|        |n-1|  |n|
+ 
+Given a Pascal's triangle of height ℎ (1 ≤ h ≤ 500), could you write a program to determine the maximum value contained in it?
+
+To simplify the problem a bit so you don't have issues storing values, instead of showing the complete value, 
+you should display the remainder of the integer division between that term and 999999937. But note that when 
+we refer to "the maximum value," it is the maximum before taking the remainder, not after.
+
+Consider that by modular arithmetic: 
+(𝑎+𝑏)%𝑐=(𝑎%𝑐+𝑏%𝑐)%𝑐
+Where % is the remainder operation (also called modulo).
+
+Input
+The input starts with a line containing the number 𝐶 of test cases, no more than 100. Then follow 𝐶 lines, 
+each with a value for ℎ.
+
+Output
+For each test case, the output should contain a line with the corresponding maximum value.
+
+Example:
+
+Input
+4
+7
+3
+10
+499
+
+Output
+20
+2
+126
+451952260
