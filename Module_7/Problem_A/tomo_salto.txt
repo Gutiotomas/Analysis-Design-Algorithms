@@ -1,0 +1,29 @@
+Tomo o Salto is a board game, perhaps the most unpopular in the world due to its simplicity. 
+It is similar to the game of snakes and ladders in the sense that the player moves through sequential spaces, 
+but instead of moving in both X and Y directions, they only move in one direction. In other words, it doesn't 
+resemble a grid but rather an array. Moreover, each space has no figure, no wildcard, no trap, nothing, just a 
+non-negative integer value.
+
+The game is played as follows: starting at the first space (let’s say the one on the far left, moving towards the right), 
+the player decides whether to "take" that space or "skip" it. If they take it, they accumulate the value of that space 
+and move to the next one. If they skip it, they accumulate nothing and move to the next space. This process repeats 
+from the current space until the player reaches space 
+𝑁
+N, which is the one farthest to the right. The objective of the game is to accumulate the maximum possible value, 
+but there’s one rule: if you take a space and had previously taken the one immediately to its left, the value taken 
+in the previous move is lost, meaning you must subtract it from the accumulated score.
+
+Obviously, without this rule, besides being simple, the game would be stupid because you could just take all 𝑁 spaces 
+and be done. Instead, what you need to do is make the correct decisions (take or skip) in such a way as to maximize the 
+final accumulation.
+
+For example, if there are 4 spaces with values: 2, 1, 3, 4, the optimal decisions would be "take, skip, take, take" or 
+"take, skip, skip, take," and the accumulated score in both cases would be 6.
+
+Input
+The input begins with a line containing the number of cases, no more than 50. Each case begins with a line containing 
+a positive integer 𝑁 (not greater than 1E6) representing the number of spaces. Then, 𝑁 lines follow, each containing 
+a non-negative integer value not exceeding 1E9.
+
+Output
+The output must contain a single line with the highest possible score.
