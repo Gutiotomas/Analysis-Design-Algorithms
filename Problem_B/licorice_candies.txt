@@ -1,0 +1,34 @@
+The essential ingredients for making licorice candies are the extract from the licorice plant (Glycyrrhiza glabra),
+sugar, and a thickening agent, which can be starch, flour, gum arabic, or gelatin. These candies are well-known worldwide, 
+and their most common form is a spirally coiled tube. They also come in various colors, although in Europe, black is the 
+most common, while in the United States, they are usually red on the outside and white on the inside.
+
+It turns out that the retail market for these candies (in stores and street stalls), at least in their tubular form, 
+is quite peculiar. The thickness is constant, around a quarter of an inch, while the lengths can vary between one inch 
+and any multiple of this, depending on the customer's choice, but the price per inch is not constant. In other words, 
+a licorice candy that is two inches long will not necessarily cost twice as much as a one-inch candy, and so on.
+
+If the prices for all lengths between 1 and 𝑁 inches are known, and each customer decides the length to buy 
+(only multiples of an inch), would you help a store with a candy of length 𝑁 to know, if it sells the entire candy, 
+what are the minimum and maximum total sales values it could receive?
+
+Input
+The input begins with a line containing the number 𝐶 of test cases, no more than 5. Then 𝐶 lines follow, 
+each starting with the value of 𝑁 (1 ≤ 𝑁 ≤ 500), followed by a space, and then 𝑁 positive integer values, 
+no greater than 1E6, separated by spaces, which correspond to the sale prices for each length.
+
+Output
+The output must contain 𝐶 lines, each with the minimum and maximum values for each test case, separated by a space.
+
+Example:
+
+Input
+3
+2 150 200
+5 10 20 30 40 50
+5 20 30 50 90 100
+
+Output
+200 300
+50 50
+80 110
