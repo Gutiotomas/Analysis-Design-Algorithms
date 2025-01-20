@@ -1,0 +1,44 @@
+When a new supermarket arrives in the city, a common marketing strategy is to start with a super promotion 
+to attract people to come in and get to know it. That's exactly what MercaMásMás did. There was already a 
+competitor supermarket in the city called MercaMás, so to denote that customers could save even more at the 
+new store, they added the second "más" to their name. This amused C++ programming language enthusiasts, 
+who began tagging it on social media as MerK++.
+
+Returning to the topic of the strategy, MercaMásMás has devised a super promotion. All products will be 
+discounted to 50% of their price, but each person can only buy one unit of each product. Partial quantities 
+are not allowed either.
+
+The Jaramillo family wants to take full advantage of this opportunity by going together with a clear strategy: 
+each member will buy as much as possible, not necessarily in terms of the number of items, but in the final 
+value of the purchase. Money is not an issue for the Jaramillos, and the quantity of each product is unlimited. 
+The problem is that each member can only carry a certain amount of weight.
+
+For example, if the supermarket offers only three products with prices of 10, 20, and 30 thousand pesos, 
+with corresponding weights of 20, 40, and 50 kilograms, and they go shopping with two members who can carry 
+70 and 30 kilograms respectively, the maximum purchase they can make is 50 thousand pesos 
+(the member who can carry 70 kg would buy the products weighing 50 and 20 kg, while the member who can carry 30 kg 
+would buy the product weighing 20 kg).
+
+Input
+The input starts with a line containing the number 𝑃 of products available in the supermarket, no more than 1000. 
+The next 𝑃 lines each contain two positive integers 𝐶 (1 ≤ 𝐶 ≤ 10000) and 𝑊 (1 ≤ 𝑊 ≤ 50), separated by a space. 
+The value 𝐶 corresponds to the product's cost in thousands of pesos, while 𝑊 corresponds to the weight in kilograms. 
+Then follows a line with a positive integer 𝐽, which corresponds to the number of Jaramillo family members, no more than 10. 
+The next 𝐽 lines each contain the maximum weight in kilograms that each member can carry, no more than 80.
+
+Output
+The output should contain a single line with the value of the maximum possible purchase.
+
+Example:
+
+Input
+3
+10 20
+20 40
+30 50
+2
+70
+30
+
+Output
+50
