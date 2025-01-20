@@ -1,0 +1,30 @@
+Like many people in this country, Lucia and Felipe have to hustle daily to make a living. Also, like many others, 
+they decided to perform juggling acts at traffic lights, hoping to entertain passing drivers and receive a small 
+financial reward in return.
+
+To save themselves the trouble of dividing the money collected after each performance, Lucia and Felipe decided it 
+was more practical to pool everything collected during the day and only divide it at the end. The problem is that 
+at the end of the day, they end up with a bag full of coins (nobody gives bills), and it's not always easy to split 
+the total exactly in half.
+
+Input
+The input starts with an integer representing the number 𝐶 of test cases (no more than 5). Then follow 𝐶 lines, 
+each with between 1 and 100 values separated by a space. These values correspond to the coins collected, and we 
+assume that the denominations of these coins can be any positive integer multiple of 10, with no value greater than 500.
+
+Output
+For each test case, you must display on a single line the minimum difference (in absolute value) that results from 
+the coin distribution.
+
+Example:
+
+Input
+3
+10 20 40 60
+20 30 50
+70 100 70 100 80
+
+Output
+10
+0
+20
