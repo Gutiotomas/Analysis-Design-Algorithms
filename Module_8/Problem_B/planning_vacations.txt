@@ -1,0 +1,34 @@
+Miguel has finally saved enough money to enjoy his dream vacation: traveling to as many different cities as possible. T
+he problem Miguel faces is that he doesn’t know which route to take, so he asked his parents for advice. His mother told him: 
+"You should first go to Buenos Aires, then to Rio de Janeiro, then to Santiago de Chile, and finally to Lima, exactly in 
+that order." Meanwhile, his father told him: "You should first go to Buenos Aires, then to Santiago de Chile, then to Lima, 
+and finally to Rio de Janeiro, exactly in that order."
+
+Miguel's dilemma is how to follow both his mother's and father's advice so that neither feels their suggestion was ignored. 
+The idea Miguel came up with was to take the route Buenos Aires – Santiago de Chile – Lima, arguing that he doesn't have 
+time for Rio de Janeiro, thus partially satisfying the order of both suggestions. In this case, he would visit 3 cities 
+without hurting his parents' feelings.
+
+To avoid the same dilemma in the future, and given that the number of cities could be much larger, Miguel wants to plan 
+his trips in a way that satisfies both parents as much as possible. He can represent each city with a different character, 
+using lowercase letters a-z, uppercase letters A-Z, digits 0-9, 
+and the symbols '!', '#', '$', '%', '&', '/', '(', ')', '=', '?', '+', '*', '{', '}', '[', ']', '_', ':'. In other words, 
+80 possible cities in total, knowing that the suggestions do not repeat any cities.
+
+Input
+The input starts with a line containing the number 𝑆 of pairs of suggestions (no more than 200). Then follow 𝑆 lines, 
+each containing two suggestions, encoded as a sequence of characters as explained above, separated by a space. 
+Each pair of suggestions does not necessarily consider the same cities.
+
+Output
+The output should contain 𝑆 lines, each with the maximum number of cities that satisfy both suggestions.
+
+Example:
+Input
+2
+abcde bcaed
+abcd dacb
+
+Output
+3
+2
