@@ -1,0 +1,43 @@
+The final exam in a human history course consists of arranging a series of important events in chronological order. 
+Students who arrange all the events in the exact order receive a perfect score, but how do you grade those who did 
+not respond in the exact order?
+
+One common alternative is to give a point for each event located in the correct position. Another alternative is to 
+give a point for each event that is in the correct relative order. In both cases, the final score will be equal to 
+the sum of points. Note that in both cases, a perfect score would mean a number of points equal to the number of 
+events to be arranged. For example, if the correct order of 3 consecutively numbered events is 1 2 3, a student A 
+with response 1 2 3 would receive a score of 100% (perfect), while a student B with response 1 3 2 would receive a 
+score of 33% with the first alternative (only event 1 would be located correctly), while with the second alternative 
+they would receive a score of 67% (events 1 and 2 or 1 and 3 would be in the correct relative order).
+
+Input
+The input starts with a positive integer 𝐶, no greater than 5, corresponding to the number of test cases. 
+Each test case starts with a line containing a positive integer 𝐸, no greater than 20, corresponding to the number 
+of exams to grade, followed by 𝐸+1 lines, the first one with the events corresponding to the perfect answer, 
+and the remaining with the students' responses. In each of these 𝐸+1 lines, there will be 𝑁 (1 ≤ N ≤ 60) different 
+positive numbers, between 1 and 𝑁, separated by a space.
+
+Output
+Each test case starts with a single line with the message (without quotes): "caso i:" where 𝑖 is the consecutive number 
+of the case. Then follow 𝐸 lines with the corresponding exam scores according to the second alternative explained above, 
+rounded to the nearest integer. Between test cases, there will be an empty line, but there will be no empty line after 
+the last case.
+
+Example:
+Input
+2
+2
+1 2 3
+1 2 3
+1 3 2
+1
+4 3 2 1
+1 2 3 4
+
+Output
+caso 1:
+100
+67
+
+caso 2:
+25
