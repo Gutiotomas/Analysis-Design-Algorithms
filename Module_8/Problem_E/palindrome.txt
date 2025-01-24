@@ -1,0 +1,34 @@
+A palindrome (from the Greek palin dromein, meaning "to go back") is a word, number, or phrase that reads the same 
+forward and backward. In the case of numbers, they are also known as capicúa numbers, but let’s focus on words, 
+or more specifically, strings of characters. For example, "Ana" is a palindrome, while "Pedro" is not. However, 
+any string can be transformed into a palindrome with a finite number of operations. Consider the following three operations:
+
+Add a character
+Remove a character
+Replace a character
+To transform "abccda" into a palindrome, one could, for instance, add two characters 
+('d' in position 3 and then 'b' in position 7), or replace 'b' with 'd' (or equivalently, 'd' with 'b').
+
+Assume that each of the three operations costs the same, one unit. The problem, therefore, is to find the least 
+expensive way to transform a given string into a palindrome.
+
+Input
+The input begins with a positive integer 𝑁, representing the number of test cases (no more than 10). Then, there are 
+𝑁 lines, each containing a string of characters composed only of lowercase letters. The length of these strings is 
+at most 200 characters.
+
+Output
+The output should contain 𝑁 lines, each with the minimum number of operations required to convert the 
+corresponding string into a palindrome.
+
+Example:
+Input
+3
+asa
+coco
+piedra
+
+Output
+0
+1
+3
