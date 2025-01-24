@@ -1,0 +1,50 @@
+Dad, dad, for my 18th birthday, I want you to let me bike around the country.
+
+But Daniela, how could you think of that? You’re too young, that adventure could be very long and dangerous.
+
+Look, dad, in 2020, 19-year-old Zara Rutherford, a Belgian-British pilot, became the youngest person to fly 
+an airplane across 52 countries on five continents over five months.
+
+Yes, but...
+
+Dad, wait: In 2010, 16-year-old Jessica Watson from Australia became the youngest navigator to sail around the world. 
+You can see it in the movie "True Spirit." Are you going to tell me that I can't at least bike around the country?
+
+After thinking about it for a long time, Daniela’s dad finally said:
+
+Okay, you can do it, but with one condition: You must choose the starting and destination cities for your adventure in 
+such a way that one is reachable from the other. Once you've decided, you must use the shortest route between them. Deal?
+After agreeing, Daniela took a map to plan her trip. To her surprise, the two cities farthest apart from each other weren’t 
+necessarily the ones with the longest route possible because it depends on the roads between them. Given a list of cities and 
+the road distances between them, can you help Daniela choose the two cities that maximize her journey while fulfilling 
+her dad’s restriction?
+
+Input
+The input consists of a series of test cases, no more than 5. Each test case starts with a line containing a positive integer 
+𝑁, no greater than 50, which corresponds to the number of cities. Then follow 𝑁 lines with the distance matrix 
+between the cities. 
+The cities are identified by integer values from 1 to 
+𝑁, and in each line, the distance values are presented as positive integers no greater than 500, separated by spaces. 
+The matrix is symmetric, with the diagonal values being zero, and if there is no road between city 𝑖 and city 𝑗, 
+a hyphen ('-') will appear in the matrix. There will be at least two cities connected.
+
+Output
+For each test case, the output should contain a line with the longest possible distance of the shortest route 
+between two cities.
+
+Example:
+Input
+3
+0 10 40
+10 0 20
+40 20 0
+4
+0 100 300 -
+100 0 200 600
+300 200 0 400
+- 600 400 0
+0
+
+Output
+30
+700
