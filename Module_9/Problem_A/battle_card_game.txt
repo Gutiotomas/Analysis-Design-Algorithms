@@ -1,0 +1,48 @@
+In broad terms, in a game of this type, each player has a set of cards, where each card represents a resource 
+(usually a creature/object/technique/battle magic), and they use them in turns, leveraging their attributes 
+(typically attack and defense power) to determine the winner. Enthusiasts of these games will say that it's 
+much more sophisticated, but for the purpose of this problem, that description will suffice.
+
+An additional feature of some of these games is that the cards can be combined (for example, fusing two creatures 
+to obtain a new, more powerful one). Well, it turns out that some algorithm enthusiasts created their own battle card game. 
+Pretty cool, by the way. In this version, each card has only two attributes: the card identifier and its power level. 
+Both are positive integers; the identifier is unique (no two cards share the same identifier), while the power level 
+may be repeated. The game does not use turns; instead, given the number 
+𝑁
+N of cards a player holds, the player must determine how to fuse them, two at a time, until only one card remains. 
+The following rules apply:
+
+A player's deck must be strictly ordered in ascending order according to the card identifiers.
+Two cards 𝐴 and 𝐵 can only be fused if they are consecutive (next to each other) considering this order.
+When fusing two cards 𝐴 and 𝐵, the identifier of the resulting card will be the maximum between the identifiers of 
+𝐴 and 𝐵. Meanwhile, the resulting power level will be equal to the sum 𝑆 of the power levels of 𝐴 and 𝐵, 
+plus the number of divisors of 𝑆. For example, if card 𝐴 has identifier 10 and power level 5, and card 𝐵 has identifier 11 
+and power level 9, the resulting card's identifier will be 11, and the power level will be 18 (since 𝑆=5+9=14, 
+and 14 has 4 divisors).
+So now you know, instead of "trusting in the heart of the cards" to determine how to play, program an algorithm that 
+guarantees you a win.
+
+Input
+The input begins with a line containing the number 𝐶 of test cases (no more than 5). Each test case begins with a 
+line containing an integer 𝑁 (1 ≤ 𝑁 ≤ 50) indicating the number of cards. This is followed by 𝑁 lines, 
+each containing two integers separated by a space, representing the identifier and power level of the corresponding card. 
+Both integers are positive and less than 1000.
+
+Output
+The output should have 𝐶 lines, each with the resulting power level of the optimal fusion scheme.
+
+Example:
+Input
+
+2
+2
+10 10
+11 11
+3
+20 2
+30 4
+10 1
+
+Output
+25
+13
