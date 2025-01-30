@@ -1,0 +1,45 @@
+A few decades ago, phones were very different from those we have today, not only because of their sound quality 
+and size but also in how numbers were dialed. Pulse dialing was the standard dialing system from the 1920s until 
+it was progressively replaced by tone dialing or DTMF (Dual-Tone Multi-Frequency) from the 1960s and 1970s. 
+However, its use persisted in many parts of the world for several decades due to the slow modernization of 
+telephone networks. In Colombia, for example, as in other Latin American countries, this system was in use 
+until well into the 1990s, especially in rural areas or those with outdated infrastructure.
+
+In pulse dialing, each of the ten digits is encoded in sequences of up to ten pulses (hence its name), 
+and the most common device for producing these pulses was the rotary dial, like the one shown in the photo. 
+Depending on the length of the rotation, one or more pulses would be emitted over a second. The digit 1 would 
+emit one pulse in one second, the digit 2 would emit two pulses in one second, and so on, with the peculiarity 
+that 0 emitted 10 pulses. Between digits, there would be a pause until the user rotated the dial again.
+
+If the pause between digits were also represented by one pulse, dialing the phone number 123, for example, 
+would correspond to one pulse (digit 1), followed by one pulse for the pause, followed by two pulses (digit 2), 
+followed by one pulse for the pause, followed by three pulses (digit 3), i.e., eight pulses in total.
+
+Let’s suppose we have a total number of pulses corresponding to a dialing sequence, but we don't have them 
+separated by seconds. How many different phone numbers could correspond to this total?
+
+For example, if the total number of pulses is 3, it could correspond to phone numbers 11 or 3.
+
+Whereas, if the total number of pulses is 5, it could correspond to phone numbers 111, 13, 22, 31, or 5.
+
+Input
+The input begins with a line containing the number C of test cases (no more than 1,000). Then follow C lines, 
+each starting with the total number N of pulses (1 ≤ N ≤ 10,000).
+
+Output
+The output should contain C lines, each with the number of possible phone numbers. Since this number may be very large, 
+the result should be calculated modulo 1,000,000,007.
+
+Example:
+Input
+4
+1
+3
+5
+10
+
+Output
+1
+2
+5
+55
