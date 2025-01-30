@@ -1,0 +1,60 @@
+When December arrives, everyone rushes to decorate their homes with Christmas decorations. Matías is no exception, 
+but as a programmer, he does it in a very particular way. He likes to use colored light bulbs to form a tree at the 
+entrance of his house. But not just any kind of tree. It has to be a binary tree, meaning it starts with a single 
+bulb at the top of the tree, and from there down, each bulb has at most two "children" bulbs, one on the left and 
+one on the right.
+
+As if that weren't enough, Matías looks at the serial identifier of each bulb (an alphanumeric code unique to each one) 
+and does not allow a bulb that is a "left child" of another to have a serial greater than that of its parent, just as he 
+does not allow a bulb that is a "right child" of another to have a serial smaller than that of its parent.
+
+Do you think that's exaggerated? Well, there's more: Matías uses a set of bulbs that are not homogeneous in the sense 
+that each one has a specific amount of lumens (lm). Due to electrical phenomena that we won’t discuss here, it turns 
+out that the electricity consumption is determined by the amount of lumens multiplied by the length of the cable in 
+decimeters from the top of the tree to it. Matías is very strict about this, and the cable length between every bulb 
+and each of its child bulbs is uniform throughout the tree (one decimeter), so the final cable length to each bulb 
+depends only on the level of the tree it is in. Thus, the bulb at the top is at level 1, so the cable length to it 
+is one decimeter, its children are at level 2 with a cable length of two decimeters, and so on, until the bulbs at 
+the last level of the tree.
+
+Given a number 𝑁 of bulbs that Matías wants to place on his tree, could you help him determine the configuration 
+that minimizes the total electricity consumption of the tree? This tree may not be very beautiful, as it won't 
+necessarily be "balanced," but it will surely make Matías happy.
+
+Input
+The input starts with a line containing an integer 𝐶, which represents the number of test cases (no more than 10). Then, 
+𝐶 lines follow, each containing 𝑁 (0 ≤ 𝑁 ≤ 60) pairs of values corresponding to the serials of each bulb and its lumen count, 
+separated by a colon. The serials are unique (with up to 2 characters A-Z, 0-9), but the lumen count is not necessarily 
+(positive integers no greater than 1000). The data between each bulb are separated by a space.
+
+Output
+Each test case starts with a line containing the message (without quotes) "caso i:", where 𝑖 is the consecutive case 
+number starting from 1. Then, there will be an empty line followed by the drawing of the tree. This drawing shows the 
+resulting tree rotated 90° to the left. Between levels, there will be a tabulation. Between cases, there will be a 
+blank line, but there won't be a blank line after the last case. It is guaranteed that there will be a unique optimal 
+tree for each case.
+
+Example:
+Input
+2
+A:10 B:10 C:10 D:10 E:10 F:10 G:10
+X:25 W:5 Y:5 V:10 Z:15
+
+Output
+caso 1:
+
+		G
+	F
+		E
+D
+		C
+	B
+		A
+
+caso 2:
+
+	Z
+		Y
+X
+		W
+	V
