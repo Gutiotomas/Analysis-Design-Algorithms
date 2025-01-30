@@ -1,0 +1,33 @@
+In order to multiply two matrices A and B, they must be compatible, meaning the number of columns of A must be 
+equal to the number of rows of B. In other words, the matrix 𝐴𝑖×𝑘 can be multiplied by 𝐵𝑘×ℎ, resulting in a matrix 
+𝐶𝑖×ℎ, and this process involves 𝑖×𝑘×ℎ individual multiplications.
+
+To multiply more than two compatible matrices, there are several ways to do it. For example, to multiply three matrices 
+𝑋, 𝑌, and 𝑍, we could do (𝑋𝑌)𝑍 or 𝑋(𝑌𝑍), but depending on the dimensions of each, the total number of operations can vary.
+
+For example, if 𝑋 has dimensions 5x10, 𝑌 has dimensions 10x20, and 𝑍 has dimensions 20x35, performing (𝑋𝑌)𝑍 
+would involve 4500 individual operations, while 𝑋(𝑌𝑍) would involve 8750.
+Given a set of matrices 𝑀1,𝑀2,...,𝑀𝑁, which are compatible for multiplication in that order, 
+they can be represented by an array of positive integers 𝑃={𝑝0,𝑝1,...,𝑝𝑁}, such that matrix 𝐴𝑖 has dimensions 𝑝𝑖−1×𝑝𝑖. 
+What is the optimal scheme for multiplying them? In other words, what is the parenthesization scheme that minimizes 
+the total number of individual operations?
+
+Input
+The input begins with a line containing the number 𝐶 of test cases (no more than 50). Then follow 𝐶 lines, each containing 
+𝑁+1 non-negative integer values representing the dimensions of the 𝑁 matrices to be multiplied (2 ≤ 𝑁 ≤ 20). 
+These values will not be greater than 50 and are separated by spaces.
+
+Output
+Assuming the matrices are named 𝑀1,𝑀2,...,𝑀𝑁, the output should contain 𝐶 lines, each with the parenthesized 
+expression representing the optimal order in which the matrices should be multiplied. The expression should strictly 
+follow the format shown in the example. Each test case guarantees that there is only one optimal parenthesization scheme.
+
+Example:
+Input
+2
+5 10 20 35
+30 35 15 5 10 20 25
+
+Output
+((M1 x M2) x M3)
+((M1 x (M2 x M3)) x ((M4 x M5) x M6))
