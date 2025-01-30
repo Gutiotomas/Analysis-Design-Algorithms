@@ -1,0 +1,29 @@
+You probably overlooked the exponent and thought about the penguin. Don’t try to deny it. Well, in this problem, 
+CAB2O or CABBO actually refers to the Cost of the Optimal Binary Search Tree, so get "cute and chubby" out of your head.
+
+You need to store a set of {e1, e2, ..., eN} distinct numerical elements in a binary search tree. If each element 
+has a non-negative integer frequency {f1, f2, ..., fN}, and it holds that e1 < e2 < ... < eN, how should the structure 
+of the tree be arranged in such a way that it minimizes the value of: 
+𝑇=∑𝑖=1 until 𝑁 of 𝑓𝑖⋅𝑐(𝑒𝑖) where 𝑐(𝑒𝑖) is equal to one plus the number of nodes in the simple path connecting 
+the root with element 
+𝑒𝑖 (the cost 𝑐 of the root is therefore one).
+
+Input
+The input starts with a line containing an integer 𝐶, which corresponds to the number of test cases (no more than 20). 
+Then there are 𝐶 lines, each with 𝑁 (0 ≤ 𝑁 ≤ 50) values corresponding to the frequencies of the elements, 
+not greater than 10,000, and separated by a space.
+
+Output
+The output should contain 𝐶 lines, each with the optimal value of 𝑇.
+
+Example:
+Input
+3
+5
+2 2 2
+16 8 4 2 1
+
+Output
+5
+10
+57
