@@ -1,0 +1,58 @@
+Have you ever participated in a programming marathon? Do you know how the scoring is calculated? 
+It turns out that teams (which must have between one and three participants) are ranked in descending 
+order based on the number of problems solved (the more, the better) and then in ascending order based 
+on the accumulated penalty times (the less, the better).
+
+A marathon generally has between 8 and 12 problems. If several teams tie both in the number of problems 
+solved and penalty time, they are considered tied but are displayed in the ranking in ascending order 
+according to their team number.
+
+A problem is considered solved by a team if any of the team's submissions for that problem is judged as correct. 
+The penalty time for a problem is calculated as the number of minutes it took the team to get the first correct 
+submission for that problem, plus 20 minutes for each incorrect submission received prior to the first correct submission. 
+Unsolved problems do not incur penalty times, and if a team has more than one correct submission for the same problem, 
+only the first is considered. Incorrect submissions after a correct one do not incur a penalty.
+
+Input
+The input begins with a positive integer 
+𝑀
+M, which indicates the number of marathons to follow (1 ≤ M ≤ 50). Then follows the data for each marathon, 
+starting with a positive integer 𝑅 (1 ≤ R ≤ 50,000), indicating the number of entries in the marathon's "logbook". 
+After this, 𝑅 lines follow with these records, which correspond to the submissions from some or all of the teams for 
+problems 1 to 12. There can be up to 1000 teams, numbered consecutively from 1. Each logbook line consists of 
+three integers separated by spaces, followed by a letter, also separated by spaces. The first number corresponds 
+to the team number, the second to the problem number, and the third to the time in minutes when the submission was made. 
+The letter corresponds to the result of the submission and can be one of the following options: C (Correct), 
+I (Incorrect), R (Request for clarification), U (Unjudged), or E (Erroneous submission). The last three cases do 
+not affect the penalty. The input lines are in the order the submissions were made, and there will always be at 
+least one team that solves at least one problem.
+
+Output
+For each marathon, there should be one line with the message (without quotes or accents): "maraton i:", where 
+𝑖 is the consecutive marathon number. Then, the scoring table for that marathon should be displayed according 
+to the procedure previously defined. That is, each row of the table should contain three values separated by spaces: 
+the team number, the number of problems solved, and the accumulated penalty time (there should be no space after this value). 
+Considering that of the 1000 teams, some may not have participated, done absolutely nothing, or only obtained results
+other than "Correct", only those teams that had at least one correct submission should be shown. There should be a 
+blank line between the outputs of two consecutive marathons, but there should not be a blank line after the last marathon.
+
+Example: 
+Input
+2
+6
+1 2 10 I
+2 1 11 C
+1 2 19 R
+1 2 21 C
+1 1 25 C
+3 1 30 I
+1
+1 3 25 C
+
+Output
+maraton 1:
+1 2 66
+2 1 11
+
+maraton 2:
+1 1 25
