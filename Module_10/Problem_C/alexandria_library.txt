@@ -1,0 +1,37 @@
+This was one of the largest centers of knowledge dissemination in Antiquity. It was established in the 3rd century BC,
+and it is estimated that it housed more than 400,000 literary, academic, and religious volumes. Among the famous 
+scholars of its time, it had contributions from Eratosthenes, Archimedes, and Euclid.
+
+At that time, the librarians didn't have social networks, so when they weren't working, they dedicated themselves 
+to a particular game: they would take any book with 
+𝑀
+M pages and search for the page number where, if they added up the number of digits of each page number from 1 to 
+that page (inclusive), it would be the same as the sum of the digits of the following pages. If no page satisfied 
+this property, they would look for the page with the largest value for which the sum of digits up to that page was 
+less than the sum of digits of the following pages.
+
+So, for example, if the book has 𝑀=102 pages, the page number sought will be 54, as the sum of digits up to that 
+page is 99, which is equal to the sum of the digits of the following pages. On the other hand, if the book has 
+𝑀=50 pages, the sought page number will be 27, as the sum of digits up to that page is 45, and the sum of 
+digits of the following pages is 46.
+
+Input
+The input contains multiple test cases, no more than 20,000. Each test case is presented in a line containing 
+the value of 𝑀 (1 < M < 10^{10}). The input ends with a value of 0, which is not a test case.
+
+Output
+For each test case, the output must contain a line with the sought page number.
+
+Example:
+Input
+102
+50
+200
+999999
+0
+
+Output
+54
+27
+118
+509258
