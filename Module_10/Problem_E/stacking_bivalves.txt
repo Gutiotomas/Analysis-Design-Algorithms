@@ -1,0 +1,28 @@
+Bivalves are a type of mollusk, also called pelecypods, which include around 20,000 species, with some of the most 
+well-known being clams and mussels. As the name suggests, they are characterized by having two shells or valves, 
+which are joined and articulated at the top edge by a hinge.
+
+It turns out that when Valentina goes to the beach, she enjoys a very particular activity. She searches for shells 
+that are as circular as possible and then stacks them into towers, following two strict rules. The first rule is 
+that she stacks them one by one in the order she finds them. The second rule is that, to add a shell to a tower, 
+the new shell must be strictly smaller than the one at the top of the tower.
+
+If, in the end, Valentina wants to have the fewest number of towers possible, what strategy should she use?
+
+Input
+The input begins with a line containing the number of test cases 𝐶 (no more than 10). Then 𝐶 lines follow, 
+each containing no more than 100,000 positive integers, each no greater than 1,000,000. These integers 
+correspond to the radii of the shells (in millimeters) in the order they were found, separated by spaces.
+
+Output
+For each test case, the output should contain a single line with the smallest number of towers possible.
+
+Example:
+Input
+2
+1 2 3 3 4
+5 5 5 3 1 3 1 1
+
+Output
+5
+3
