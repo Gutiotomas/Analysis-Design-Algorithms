@@ -1,41 +1,38 @@
-def findStatistic(arr, start, end, target, pivots):
-    if start == end:
-        return arr[start]
+def find_statistic(arr, left, right, k, indices):
+    if left == right:
+        indices.append(left + 1)
+        return arr[left]
     else:
-        pivot_index = choosePivot(start, end)
-        partition_index = partition(arr, start, end, pivot_index)
-        pivots.append(partition_index + 1)
-        if target == partition_index:
-            return arr[partition_index]
-        elif target > partition_index:
-            return findStatistic(arr, partition_index + 1, end, target, pivots)
+        pivot_index = left
+        final_pivot_index = partition(arr, left, right, pivot_index)
+        indices.append(final_pivot_index + 1)
+        
+        if k == final_pivot_index:
+            return arr[final_pivot_index]
+        elif k > final_pivot_index:
+            return find_statistic(arr, final_pivot_index + 1, right, k, indices)
         else:
-            return findStatistic(arr, start, partition_index - 1, target, pivots)
+            return find_statistic(arr, left, final_pivot_index - 1, k, indices)
 
-def partition(arr, left, right, pivot_index):
-    arr[left], arr[pivot_index] = arr[pivot_index], arr[left]
-    i = left
-    for j in range(left + 1, right + 1):
-        if arr[j] < arr[left]:
+def partition(arr, start, end, pivot_index):
+    arr[start], arr[pivot_index] = arr[pivot_index], arr[start]
+    i = start
+    for j in range(start + 1, end + 1):
+        if arr[j] < arr[start]:
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
-    arr[i], arr[left] = arr[left], arr[i]
+    arr[i], arr[start] = arr[start], arr[i]
     return i
 
-def choosePivot(start, end):
-    return start
-
-def cases(target, sequence):
-    length = len(sequence)
-    target = target - 1
-    pivots = []
-    findStatistic(sequence, 0, length - 1, target, pivots)
-    return pivots
-
 while True:
-    target = int(input().strip())
-    if target == 0:
+    k = int(input())
+    if k == 0:
         break
-    sequence = list(map(int, input().strip().split()))
-    pivots = cases(target, sequence)
-    print(" ".join(map(str, pivots)))
+    
+    arr = list(map(int, input().split()))
+    k -= 1
+    
+    indices = []
+    find_statistic(arr, 0, len(arr) - 1, k, indices)
+    
+    print(" ".join(map(str, indices)))
