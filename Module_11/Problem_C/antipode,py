@@ -1,0 +1,13 @@
+def antipode(total_strings, total_queries, string_list, query_list):
+    sorted_strings = sorted(string_list)
+    
+    for query in query_list:
+        index = query - 1
+        antipode_index = total_strings - query
+        print(sorted_strings[index], sorted_strings[antipode_index])
+
+total_strings, total_queries = map(int, input().split())
+string_list = input().split()
+query_list = [int(input()) for _ in range(total_queries)]
+
+antipode(total_strings, total_queries, string_list, query_list)
