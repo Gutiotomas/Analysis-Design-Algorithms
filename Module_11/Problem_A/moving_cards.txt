@@ -1,0 +1,37 @@
+Pedro and Susana love playing with cards, but with a very particular deck: the cards have no suits (hearts, clubs, etc.),
+only numbers, and many of them (up to 100,000). One of their favorite games is to shuffle the cards, and then Susana 
+starts by swapping two consecutive cards that are not in ascending order. Pedro does the same, and they take turns 
+from there on until the deck is completely sorted. The player who makes the last card swap is the winner.
+
+Input
+The input consists of a set of test cases, no more than 10. Each test case begins with a line containing the number 
+𝑁 of cards (2 ≤ 𝑁 ≤ 50,000). Then 𝑁 lines follow, corresponding to the numbers on the cards, all different, 
+with values between 1 and 𝑁. The input ends with a line containing 𝑁=0, which should not be processed.
+
+Output
+For each test case, you must print in a single line the name of the winner: either Pedro or Susana, remembering 
+that Susana always plays first. If no swaps are required, the output should display the message 
+(without quotes) "Empate" (Tie).
+
+Example:
+Input
+3
+3
+2
+1
+5
+5
+1
+3
+4
+2
+3
+1
+2
+3
+0
+
+Output
+Susana
+Pedro
+Empate
