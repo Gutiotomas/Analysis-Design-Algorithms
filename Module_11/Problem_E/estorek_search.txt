@@ -1,0 +1,70 @@
+In case you didn't know, five official languages are spoken in Spain according to the constitution and the statutes of 
+autonomy: Spanish or Castilian, which is the majority language and is spoken in many other countries; Catalan, 
+which is spoken in the region of Catalonia, the Balearic Islands, and the Valencian Community (where it is called Valencian); 
+Galician, spoken in Galicia; Aranese, a variant of Occitan, spoken in the Aran Valley; and Basque, spoken in the 
+Basque Country and in some areas of Navarre.
+
+In Basque, "estorek" is the plural form of "estore," which means "roller blind." However, in this exercise, the term 
+ESTOREK refers to something very different: K-th Order Statistic.
+
+Given a sequence of numerical elements, we already know an algorithm to find the K-th order statistic, which is 
+similar to QuickSort and follows a "divide and conquer" scheme:
+
+function findStatistic (X, N):
+    findStatistic (X, 0, N-1)
+
+function findStatistic(A, i, j, k):
+   if i = j: 
+      return A[i]
+   else:
+      p = choosePivot(i, j)
+      h = partition(A, i, j, p)
+      if k = h: 
+         return A[h]
+      else if k > h: 
+         return findStatistic(A, h+1, j, k)
+      else: 
+         return findStatistic(A, i, h-1, k)
+
+function partition(X, a, b, p):
+   swap(X[a], X[p])
+   i = a
+   for j=a+1 to b:
+      if (X[j] < X[a]){
+         i++
+         swap(X[i], X[j])}
+   swap(X[i], X[a])
+   return i
+
+If it is implemented exactly as described above and in the choosePivot function the first element of the subarray 
+is always chosen as the pivot, in which indices will the pivot end up until we reach the desired value of k?
+
+For example, if the sequence of numbers is {60, 50, 10, 40, 20, 70, 30} and we are searching for the 4th order 
+statistic (the median in this case), the following would happen:
+
+The first pivot is 60, which will end up at index 6 of the array, and the array will be: {30, 50, 10, 40, 20, 60, 70}.
+A recursive call is made with indices from 1 to 5, where the pivot will be 30, and it will end up at index 3 of the array, 
+with the array becoming: {20, 10, 30, 40, 50, 60, 70}.
+Another recursive call is made with indices 4 to 5, where the pivot will be 40, and it will end up at index 4 of 
+the original array. Since this index corresponds to the desired statistic, no further recursive calls are made, 
+and the final array is: {20, 10, 30, 40, 50, 60, 70}.
+Input
+The input contains a series of test cases, no more than 10. Each case consists of two lines. The first specifies the 
+value of k (1 ≤ k ≤ N), and the second contains N (1 ≤ N ≤ 1E7) integers in the range [-1E9, 1E9] separated by a space. 
+The input ends with a line containing k = 0, which should not be processed.
+
+Output
+For each test case, the output should contain one line with the indices i (1 ≤ i ≤ N), separated by a space, 
+where the pivot is placed in each step.
+
+Example:
+Input
+4
+60 50 10 40 20 70 30
+3
+9 8 7
+0
+
+Output
+6 3 4
+3
