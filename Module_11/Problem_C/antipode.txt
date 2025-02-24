@@ -1,0 +1,33 @@
+In Geography, the antipode (from the Greek "anti": "opposite" and "podos": "foot") is the point on 
+the Earth's surface that is diametrically opposite to a particular position. In other words, it 
+corresponds to the farthest possible destination given a point of origin.
+
+For example, the antipode of Bahía Blanca (Argentina) is Lianyungang (China), while the antipode of Hamilton (New Zealand) 
+is Córdoba (Spain), or the antipode of Rapa Nui (Easter Island, Chile) is Jaisalmer (India).
+
+In this problem, however, we are going to think of the antipode in a different way. Given a sequence of N strings 
+(not necessarily distinct), the antipode of A will be B if and only if, when the sequence is sorted in ascending order, 
+the position of A is 𝑖 and the position of B is 𝑁−𝑖+1 (where 1≤𝑖≤𝑁).
+
+What we need to do, then, is, given a value 𝑖, return the values of A and B separated by a space.
+
+Input
+The input begins with a line containing two integers 𝑁 (1 ≤ N ≤ 100,000) and 𝐶 (1 ≤ C ≤ 20), separated by a space. 
+Then follows a line with 𝑁 strings separated by spaces, each composed of no more than 4 uppercase letters (A - Z). 
+After that, there are 𝐶 lines, each containing the value 𝑖 (1 ≤ i ≤ N).
+
+Output
+The output should contain a single line with the corresponding values of A and B for each query.
+
+Example:
+Input
+5 3
+A B C D E
+2
+1
+4
+
+Output
+B D
+A E
+D B
