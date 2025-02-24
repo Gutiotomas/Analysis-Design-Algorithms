@@ -1,0 +1,39 @@
+Eugenics - from the Greek eugoniké, meaning "good origin," is an ideology that advocates for the improvement of 
+human hereditary traits through the selection of individuals and genetic intervention. It is rumored that in the 
+mid-20th century, there was a somewhat eccentric scientist obsessed with eugenics research and who was also 
+passionate about algorithms. According to him, if he could sequence the entire genetic map of humans 
+(which, in reality, was only achieved at the beginning of the 21st century with the Human Genome Project), 
+he could easily select the best humans. How? We all know that DNA is composed of chains of four types of 
+proteins: A, C, G, and T. His idea was that, given someone's DNA sequence, the more alphabetically ordered it was, 
+the better that individual would be.
+
+For example, an individual with the sequence ACCGTT would be considered perfect, while another with the sequence 
+CCAGTG would have a "defect level" of 3. This level corresponds to the number of proteins that are out of alphabetical 
+order compared to the others (in the example, 'A' is two positions to the right of where it should be, and 'T' is one 
+position to the left).
+
+Let's assume we're going to help the scientist select the best M individuals from among N, and we have the DNA 
+sequence for each one.
+
+Input
+The input begins with a line containing two positive integers separated by a space, N and M (1 ≤ M ≤ N ≤ 1000). 
+Then follow N lines, each containing the DNA sequence of a respective individual: a string composed of a combination 
+of between 2 and 4096 characters ('A', 'C', 'G', 'T').
+
+Output
+The output should consist of M lines containing the chosen individuals. The first selection criterion is the defect 
+level (the lower, the better), and in case of a tie, the sequences are sorted alphabetically.
+
+Example:
+Input
+5 3
+ACTT
+CAGT
+ACGT
+ACTG
+TGCA
+
+Output
+ACGT
+ACTT
+ACTG
