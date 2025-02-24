@@ -1,0 +1,63 @@
+We are already familiar with the QuickSort algorithm, which follows a "divide and conquer" 
+approach without requiring additional memory.
+
+function quickSort(X, N):
+    quickSort(X, 0, N-1)
+
+function quickSort(A, i, j, k):
+   if i = j: 
+      return A[i]
+   else:
+      p = choosePivot(i, j)
+      h = partition(A, i, j, p)
+      if k = h: 
+         return A[h]
+      else if k > h: 
+         return quickSort(A, h+1, j, k)
+      else: 
+         return quickSort(A, i, h-1, k)
+
+function partition(X, a, b, p):
+   swap(X[a], X[p])
+   i = a
+   for j = a+1 to b:
+      if (X[j] < X[a]){
+         i++
+         swap(X[i], X[j])}
+   swap(X[i], X[a])
+   return i
+
+This exercise basically consists of implementing it. However, since sorting a dataset cannot be the 
+output because any sorting algorithm would yield the same result, the idea is as follows: 
+If implemented exactly as described above, and in the choosePivot function the first element of 
+the sub-array is ALWAYS selected as the pivot, you must output the number of recursive calls made.
+
+For example, if the original array that needs to be sorted is {3, 1, 5, 2, 4}:
+
+The first pivot will be 3, which will end up at index 2 in the original array, resulting in 
+the array {2, 1, 3, 5, 4}. This generates two recursive calls: first for {2, 1} and then for {5, 4}.
+In the next recursive call, with the sub-array {2, 1}, the pivot will be 2, which will end up at 
+index 1 in the original array, resulting in the array {1, 2, 3, 5, 4}. This recursive call will not 
+generate more branches of recursion as the resulting sub-arrays have sizes 0 and 1 respectively.
+In the next recursive call, with the sub-array {5, 4}, the pivot will be 5, which will end up at 
+index 4 in the original array, resulting in the array {1, 2, 3, 4, 5}. This recursive call will 
+not generate more branches of recursion as the resulting sub-arrays have sizes 1 and 0 respectively.
+In total, for this example, the number of recursive calls was 3.
+Input
+The first line of the input contains the number 𝐶 of test cases (no more than 100). Then follow 
+𝐶 lines, each containing up to 50,000 integer values separated by spaces.
+
+Output
+The output consists of 𝐶 lines, each containing the corresponding number of recursive calls.
+
+Example:
+Input
+3
+3 1 5 2 4
+5 4 3 2 1
+6 3 9 7 1 4 2 0 8 5
+
+Output
+3
+4
+7
