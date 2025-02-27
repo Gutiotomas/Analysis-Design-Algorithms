@@ -1,0 +1,32 @@
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ...
+
+What if I don’t underestimate your abilities by asking for the N-th term of the Fibonacci series? 
+Well, how about this: what if N is large?
+
+But to avoid issues with storing large values, we'll simplify it a bit: instead of showing the full term, 
+you'll need to show the remainder of the division between that term and 999999937.
+
+Let's consider modular arithmetic: (a * b) % c = (a % c * b % c) % c
+Where % is the remainder operation (also known as modulus).
+
+Input
+The input starts with a line containing the number C of test cases, no more than 20. 
+Then follow C lines, each with the corresponding value of N (1 ≤ N ≤ 1E10).
+
+Output
+For each test case, output a single line with the remainder of the division between the corresponding 
+Fibonacci term and 999999937.
+
+Example:
+Input
+4
+10
+25
+1000
+1000000000
+
+Output
+34
+46368
+551066630
+269060224
