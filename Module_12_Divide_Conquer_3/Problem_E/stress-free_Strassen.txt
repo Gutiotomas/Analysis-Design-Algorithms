@@ -1,0 +1,138 @@
+In Strassen's algorithm for the multiplication of two matrices X and Y, both of size N * N: 
+Matrix X is defined as:
+
+𝑋=[𝐴𝐵
+   𝐶𝐷]
+
+Matrix Y is defined as:
+𝑌=[𝐸𝐹
+   𝐺𝐻]
+
+Where submatrices A to H are of size 𝑁/2×𝑁/2.
+
+Thus, the result 
+𝑍=𝑋×𝑌 is:
+𝑍=[𝑃1+𝑃2 𝑃3+𝑃4 
+   𝑃5+𝑃6 𝑃7+𝑃8]
+
+With:
+
+𝑃1=𝐴×𝐸
+𝑃2=𝐵×𝐺
+𝑃3=𝐴×𝐹
+𝑃4=𝐵×𝐻
+𝑃5=𝐶×𝐸
+𝑃6=𝐷×𝐺
+𝑃7=𝐶×𝐹
+𝑃8=𝐷×𝐻
+These subproblems can be solved recursively down to the base cases (N = 2).
+
+This exercise essentially consists of implementing this algorithm as described, i.e., 
+considering the EIGHT subproducts instead of the SEVEN that Strassen proposes, 
+and strictly for matrices X and Y of size 𝑁×𝑁, where 𝑁=2^𝑖, for positive integers 𝑖 less than or equal to 5.
+
+Since the result cannot simply be the result of the multiplication 
+(as the "standard" cubic complexity algorithm would also fulfill the purpose), 
+the idea is to display the results of the recursive calls from the base cases up 
+to the original multiplication. To simplify it even further, instead of showing t
+he matrix Z each time, the output will display the value 𝑄(𝑍), which corresponds to the sum of all elements of Z.
+
+Example:
+Let: 
+𝑋=[1  2  3  4
+   5  6  7  8
+   9 10 11 12
+  13 14 15 16],
+
+𝑌=[1 0 0 1
+   0 1 1 0
+   0 1 1 0
+   1 0 0 1] 
+
+In this case, there would be one level of recursion to reach the base cases: 
+
+𝐴=[1 2
+   5 6],
+𝐵=[3 4
+   7 8],
+𝐶=[9  10
+   13 14],
+𝐷=[11 12
+   15 16], 
+𝐸=[1 0
+   0 1],
+𝐹=[0 1
+   1 0],
+𝐺=[0 1
+   1 0],
+𝐻=[1 0
+   0 1]
+
+With these, the following 8 products would be obtained:
+
+𝑃1=[1 2
+    5 6] with 𝑄=14,
+𝑃2=[4 3
+    8 7] with 𝑄=22,
+𝑃3=[2 1
+    6 5] with 𝑄=14,
+𝑃4=[3 4
+    7 8] with 𝑄=22,
+𝑃5=[9  10
+    13 14] with 𝑄=46,
+𝑃6=[12 11
+    16 15] with 𝑄=54,
+𝑃7=[10 9
+    14 13] with 𝑄=46,
+𝑃8=[11 12
+    15 16] with 𝑄=54
+
+At the next recursion level, the resulting matrix would be: 
+𝑍=[5  5  5  5
+   13 13 13 13
+   21 21 21 21
+   29 29 29 29] with 𝑄(𝑍)=272.
+
+Input:
+The first line of input contains the number C of test cases (no more than 20). 
+Each test case begins with a line containing the value of N. Then follow 2*N lines, 
+the first N lines containing the rows of matrix X with N integer values in the range 
+[-1000, 1000] separated by spaces, and then the same for matrix Y.
+
+Output:
+For each test case, the output should begin with a line with the message (without quotes) "caso i:", 
+where i is the corresponding case number, followed by the values of 𝑄(𝑍) of the resulting recursion 
+tree as specified. A blank line should be left between cases, and no blank line should be left after the last case.
+
+Example:
+Input
+2
+2
+1 2
+3 4
+5 6
+7 8
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+1 0 0 1
+0 1 1 0
+0 1 1 0
+1 0 0 1
+
+Output
+caso 1:
+134
+
+caso 2:
+14
+22
+14
+22
+46
+54
+46
+54
+272
