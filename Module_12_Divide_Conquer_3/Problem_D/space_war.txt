@@ -1,0 +1,38 @@
+In a galaxy far, far away, there is a rivalry between two factions that hate each other to the death: 
+the Galactic United League (LGU) and the Interplanetary Allied Community (CAI). 
+Countless planets belong to one faction, and others belong to the opposing faction. 
+For centuries, a truce has prevented aggression, but rumors say that a war is imminent, 
+and all it takes is for two rival planets to start fighting for a full-scale war to break out. 
+The closer two rival planets are, the higher the probability that they will be the ones to start the war.
+
+Input
+The input consists of several test cases, no more than 5. Each test case begins with a line that 
+contains the number N of planets (2 ≤ N ≤ 20000). Then follow N lines that correspond to the 
+information of each planet. This information contains three values separated by a blank space. 
+The first two values correspond to the position of the planet in a 2D plane (it should be 3D, 
+but with an imminent war, this detail loses importance), both being positive integers no greater than 40000. 
+No two planets are in the same position. The third value indicates the faction to which the planet belongs: 
+"LGU" for the Galactic United League or "CAI" for the Interplanetary Allied Community. 
+The input ends with a value of N = 0, which should not be processed.
+
+Output
+For each test case, the output should display on a single line the shortest distance between 
+two rival planets. This value should be rounded to one decimal place, using 
+a dot as the decimal separator. If there are no rival planets in the test case, you should display 
+the message (without quotes) "INF".
+
+Example:
+Input
+4
+1 1 CAI
+10 1 LGU
+1 2 CAI
+3 2 LGU
+2
+3 3 LGU
+4 4 LGU
+0
+
+Output
+2.0
+INF
