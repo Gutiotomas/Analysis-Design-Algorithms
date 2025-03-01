@@ -1,0 +1,103 @@
+In the Karatsuba algorithm for multiplying two integers X and Y, both with N digits, 
+the following decomposition is used:
+
+X = (10^N / 2) * a + b, Y = (10^N / 2) * c + d, such that:
+
+X * Y = 10^N P1 + 10^N / 2 (P2 + P3) + P4, where:
+
+P1 = a * c
+P2 = a * d
+P3 = b * c
+P4 = b * d
+In this way, the 4 sub-problems can be solved recursively until reaching the base cases (N = 1).
+
+This exercise consists of implementing this algorithm, exactly as described, considering the FOUR 
+subproducts instead of the THREE proposed by Karatsuba, and strictly for positive integers
+ X and Y of N = 2^i digits, where i is a positive integer less than or equal to 6. 
+ Neither X nor Y will start with the digit 0.
+
+Let’s consider the following example: X = 1234, Y = 5678.
+
+In this case, the first recursive call would decompose the problem as follows:
+
+a = 12, b = 34, c = 56, d = 78 (this should not be shown)
+The subproduct P1 = a * c would be decomposed into:
+
+P1 = a * c = 5
+P2 = a * d = 6
+P3 = b * c = 10
+P4 = b * d = 12
+The result would be 672.
+
+The subproduct P2 = a * d would be decomposed into:
+
+P1 = a * c = 7
+P2 = a * d = 8
+P3 = b * c = 14
+P4 = b * d = 16
+The result would be 936.
+
+The subproduct P3 = b * c would be decomposed into:
+
+P1 = a * c = 15
+P2 = a * d = 18
+P3 = b * c = 20
+P4 = b * d = 24
+The result would be 1904.
+
+The subproduct P4 = b * d would be decomposed into:
+
+P1 = a * c = 21
+P2 = a * d = 24
+P3 = b * c = 28
+P4 = b * d = 32
+The result would be 2652.
+
+After moving up one level in the recursion tree, by combining these P1, P2, P3, P4, the 
+original product would be reached, and the final result would be: 7006652.
+
+Input
+The first line of the input contains the number C of test cases (no more than 50). Then follow C lines, 
+each containing three integers separated by a blank space: N, X, Y.
+
+Output
+For each test case, the output must begin with a line with the message (without quotes) "caso i:", 
+where i is the corresponding value, followed by the results of the resulting recursion tree as specified previously. 
+There must be a blank line between cases, and no blank line after the last case.
+
+Example:
+Input
+2
+4 1234 5678
+2 10 20
+
+Output
+caso 1:
+5
+6
+10
+12
+672
+7
+8
+14
+16
+936
+15
+18
+20
+24
+1904
+21
+24
+28
+32
+2652
+7006652
+
+caso 2:
+2
+0
+0
+0
+200
